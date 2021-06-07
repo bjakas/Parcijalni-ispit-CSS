@@ -1,0 +1,7 @@
+@mixin background {
+    background-image: url(./images/blur-clean.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}

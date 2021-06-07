@@ -1,0 +1,59 @@
+@import "./base/reset";
+@import "./base/colors";
+@import "./abstracts/mixins";
+
+@keyframes animation {
+    from {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+html {
+    font-size: 24px;
+}
+body {
+    @include background();
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid white;
+        text-align: center;
+        line-height: 200px;
+    }
+    p {
+        color: $text-color;
+        font-size: 3.375em;
+        font-weight: 900;
+    }
+    .box-1 {
+        animation: animation 1.5s ease 1.5s 1 normal forwards;
+        background-color: $box-1-color;
+        opacity: 0;
+        
+    }
+    .box-2 {
+        animation: animation 1.5s ease 3s 1 normal forwards;
+        background-color: $box-2-color;
+        opacity: 0;
+    }
+    .box-3 {
+        animation: animation 1.5s ease 4.5s 1 normal forwards;
+        background-color: $box-3-color;
+        opacity: 0;
+    }
+
+}
